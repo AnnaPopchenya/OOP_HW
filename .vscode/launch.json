@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "OOP_HW_be9e71de"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "seminar1.Main",
+            "projectName": "OOP_HW_be9e71de"
+        },
+        {
+            "type": "java",
+            "name": "task_1",
+            "request": "launch",
+            "mainClass": "HW_1.task_1",
+            "projectName": "OOP_HW_be9e71de"
+        }
+    ]
+}
