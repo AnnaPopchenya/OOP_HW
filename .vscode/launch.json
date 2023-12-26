@@ -4,6 +4,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "HW_2.Main",
+            "projectName": "OOP_HW-1_af49f97c"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "OOP_HW-1_af49f97c"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "Main",
             "projectName": "OOP_HW_be9e71de"
         },
