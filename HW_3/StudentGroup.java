@@ -1,20 +1,23 @@
 package HW_3;
 
-import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-class StudentGroup {
-    private List<Student> students;
+public class StudentGroup implements Iterable<Student> {
 
-    public StudentGroup() {
-        students = new ArrayList<>();
+    private List<Student> studentList;
+
+    public List<Student> getStudentList() {
+        return studentList;
     }
 
-    public void addStudent(Student student) {
-        students.add(student);
+    public void setStudentList(List<Student> studentList) {
+        this.studentList = studentList;
     }
 
-    public List<Student> getStudents() {
-        return students;
+    @Override
+    public Iterator<Student> iterator() {
+        return new StudentGroupIterator(this);
     }
+
 }

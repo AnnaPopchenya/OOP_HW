@@ -5,36 +5,42 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        StudentGroup group1 = new StudentGroup();
-        group1.addStudent(new Student("John", 20));
-        group1.addStudent(new Student("Alice", 19));
+        // Создание объектов Student
+        Student student1 = new Student();
+        student1.setFirstName("John");
+        student1.setLastName("Doe");
+        student1.setMiddleName("Smith");
 
-        StudentGroup group2 = new StudentGroup();
-        group2.addStudent(new Student("Bob", 21));
-        group2.addStudent(new Student("Eve", 18));
+        Student student2 = new Student();
+        student2.setFirstName("Jane");
+        student2.setLastName("Doe");
+        student2.setMiddleName("Smith");
 
-        List<StudentGroup> groups = new ArrayList<>();
-        groups.add(group1);
-        groups.add(group2);
+        // Создание объектов StudentGroup
+        List<Student> studentList1 = new ArrayList<>();
+        studentList1.add(student1);
+        StudentGroup studentGroup1 = new StudentGroup();
+        studentGroup1.setStudentList(studentList1);
 
-        Stream stream1 = new Stream(groups);
-        Stream stream2 = new Stream(groups);
+        List<Student> studentList2 = new ArrayList<>();
+        studentList2.add(student2);
+        StudentGroup studentGroup2 = new StudentGroup();
+        studentGroup2.setStudentList(studentList2);
 
-        List<Stream> streams = new ArrayList<>();
-        streams.add(stream1);
-        streams.add(stream2);
+        // Создание объекта Stream
+        List<StudentGroup> studentGroups = new ArrayList<>();
+        studentGroups.add(studentGroup1);
+        studentGroups.add(studentGroup2);
+        Stream stream = new Stream();
+        stream.setStudentGroups(studentGroups);
 
+        // Создание объекта Controller
         Controller controller = new Controller();
-        controller.sortStreams(streams);
+        controller.sortStreamList(stream.getStreamList());
 
-        for (Stream stream : streams) {
-            while (stream.hasNext()) {
-                StudentGroup studentGroup = stream.next();
-                List<Student> students = studentGroup.getStudents();
-                for (Student student : students) {
-                    System.out.println("Name: " + student.getName() + ", Age: " + student.getAge());
-                }
-            }
+        // Вывод отсортированных групп
+        for (StudentGroup studentGroup : stream) {
+            System.out.println("Group size: " + studentGroup.getStudentList().size());
         }
     }
 }

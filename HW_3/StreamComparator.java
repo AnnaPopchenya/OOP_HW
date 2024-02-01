@@ -1,20 +1,13 @@
 package HW_3;
 
-class StreamComparator {
+import java.util.Comparator;
+
+public class StreamComparator implements Comparator<Stream> {
+    @Override
     public int compare(Stream stream1, Stream stream2) {
-        int count1 = 0;
-        int count2 = 0;
+        int size1 = stream1.getStudentGroups().size();
+        int size2 = stream2.getStudentGroups().size();
 
-        while (stream1.hasNext()) {
-            stream1.next();
-            count1++;
-        }
-
-        while (stream2.hasNext()) {
-            stream2.next();
-            count2++;
-        }
-
-        return Integer.compare(count1, count2);
+        return Integer.compare(size1, size2);
     }
 }

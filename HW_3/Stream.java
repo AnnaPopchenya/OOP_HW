@@ -3,22 +3,26 @@ package HW_3;
 import java.util.Iterator;
 import java.util.List;
 
-class Stream implements Iterator<StudentGroup> {
-    private List<StudentGroup> groups;
-    private int index;
+public class Stream implements Iterable<StudentGroup> {
 
-    public Stream(List<StudentGroup> groups) {
-        this.groups = groups;
-        index = 0;
+    private List<StudentGroup> studentGroups;
+
+    private List<Stream> stream;
+
+    public List<StudentGroup> getStudentGroups() {
+        return studentGroups;
+    }
+
+    public List<Stream> getStreamList() {
+        return stream;
+    }
+
+    public void setStudentGroups(List<StudentGroup> studentGroups) {
+        this.studentGroups = studentGroups;
     }
 
     @Override
-    public boolean hasNext() {
-        return index < groups.size();
-    }
-
-    @Override
-    public StudentGroup next() {
-        return groups.get(index++);
+    public Iterator<StudentGroup> iterator() {
+        return studentGroups.iterator();
     }
 }
