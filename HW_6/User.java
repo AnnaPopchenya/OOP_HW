@@ -1,4 +1,4 @@
-package HW_4;
+package HW_6;
 
 public class User {
 

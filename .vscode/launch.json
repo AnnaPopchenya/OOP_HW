@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "HW_6.Main",
+            "projectName": "OOP_HW-1_af49f97c"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "HW_4.Main",
             "projectName": "OOP_HW-1_af49f97c"
         },
